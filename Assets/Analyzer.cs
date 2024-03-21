@@ -8,7 +8,7 @@ public class Analyzer : MonoBehaviour
     AudioSource source;
     float[] frame;
     public GameObject cube;
-    public UnityEvent<float> onVolumeChanged;
+    public static UnityEvent<float> onVolumeChanged = new();
 
     private void Start()
     {
