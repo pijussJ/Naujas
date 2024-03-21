@@ -13,12 +13,7 @@ public class Synth : MonoBehaviour
         var samples = new float[44100 * 2];
         for (int i = 0; i < samples.Length; i++)
         {
-            float lerpedFreq = Mathf.Lerp(1300f, 1550f, i / 44100f);
-
-            samples[i] = Mathf.Sin(i / 44000f * (Mathf.PI * 2f) * lerpedFreq);
-            samples[i] += Mathf.Sin(i / 44000f * (Mathf.PI * 2f) * (lerpedFreq * 1.1f));
-            samples[i] /= 2f;
-
+            samples[i] = Mathf.Sin(i / 44000f * (Mathf.PI * 2f) * frequency);
         }
 
         clip.SetData(samples, 0);
