@@ -12,12 +12,12 @@ public class Dancer : MonoBehaviour
     }
     public void Dance(float volume)
     {
-        transform.localScale = new Vector3(volume * 3f, volume * 3f, volume * 3f);
-        if (volume >= 0.3f)
+        transform.localScale = new Vector3(volume * 8f, volume * 8f, volume * 8f);
+        if (volume >= 0.4f)
         {
             boom.Play();
         }
-        //transform.Rotate(0, 0, volume * rotateSpeed);
+        transform.Rotate(0, 0, volume * rotateSpeed);
         //transform.position = Vector3.Lerp(new Vector3(0, 0, 0), new Vector3(3, 2, 0), volume * 5);
     }
 }
